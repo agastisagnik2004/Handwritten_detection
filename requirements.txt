@@ -1,0 +1,13 @@
+# Tested on Python 3.13 with these versions.
+# The original project targeted TensorFlow 1.8 (2019); the src_tensorflow2/ copy
+# runs on TF2 via tf.compat.v1.
+
+tensorflow==2.21.0
+tf-keras            # REQUIRED on TF>=2.16: restores legacy rnn_cell.LSTMCell removed by Keras 3.
+                    # Also set env var TF_USE_LEGACY_KERAS=1 (run_infer.py sets it automatically).
+numpy
+opencv-python
+flask               # only needed for the web demo (upload.py)
+autocorrect         # optional: spell-correction post-processing
+# editdistance      # only needed for main.py --validate; no prebuilt wheel for
+                    # Python 3.13 (needs a C++ build toolchain). Not required for inference.

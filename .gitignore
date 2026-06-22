@@ -1,0 +1,18 @@
+﻿# Large data and model files
+data_111/
+dataset/
+data/
+model/
+model_finetune/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
