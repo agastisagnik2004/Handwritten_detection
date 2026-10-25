@@ -2,7 +2,7 @@
 
 CRNN + BLSTM + CTC handwritten text recognition, ported to **TensorFlow 2**, extended with **full-page line detection** and a **fine-tuning pipeline for doctors' handwritten prescriptions** (medicine names).
 
-> **Credit:** The base model, original training code and the project description further below come from *Handwritten Line Text Recognition using Deep Learning with Tensorflow* by **Sushant Gautam** (undergraduate thesis, Tribhuvan University, 2019), MIT License. This repository builds on that work.
+> **Credit:** The base model, original training code and the project description further below come from *Handwritten Line Text Recognition using Deep Learning with Tensorflow* by **Sushant Gautam** (undergraduate thesis, Tribhuvan University, 2019), Apache-2.0 License. This repository builds on that work.
 
 ## What I added
 
