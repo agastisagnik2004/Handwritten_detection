@@ -1,10 +1,31 @@
-# Handwritten Line Text Recognition using Deep Learning with Tensorflow
-![GitHub stars](https://img.shields.io/github/stars/sushant097/Handwritten-Line-Text-Recognition-using-Deep-Learning-with-Tensorflow) 
-![GitHub forks](https://img.shields.io/github/forks/sushant097/Handwritten-Line-Text-Recognition-using-Deep-Learning-with-Tensorflow)
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/sushant097/Handwritten-Line-Text-Recognition-using-Deep-Learning-with-Tensorflow///commits/master)
-[![Website shields.io](https://img.shields.io/badge/website-up-yellow)](https://github.com/sushant097/Handwritten-Line-Text-Recognition-using-Deep-Learning-with-Tensorflow)
-[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/susan-gautam/)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+# Handwritten Text Recognition for Prescriptions & Full Pages
+
+CRNN + BLSTM + CTC handwritten text recognition, ported to **TensorFlow 2**, extended with **full-page line detection** and a **fine-tuning pipeline for doctors' handwritten prescriptions** (medicine names).
+
+> **Credit:** The base model, original training code and the project description further below come from *Handwritten Line Text Recognition using Deep Learning with Tensorflow* by **Sushant Gautam** (undergraduate thesis, Tribhuvan University, 2019), MIT License. This repository builds on that work.
+
+## What I added
+
+| Addition | Details |
+|---|---|
+| TensorFlow 2 port | `src_tensorflow2/`: runs on current TensorFlow instead of TF 1.8 |
+| Prescription fine-tuning | `finetune_on_dataset.py`: converts a doctors' handwritten prescription dataset (medicine names) to IAM format and fine-tunes the model, with Training + Validation merging, configurable epochs and resumable checkpoints |
+| Full-page recognition | `src_tensorflow2/page_infer.py`: detects text lines automatically (adaptive threshold + horizontal projection), crops each line, recognises it and applies optional spell-correction |
+| Inference tooling | `run_infer.py` for quick single-image / folder inference |
+
+```bash
+# fine-tune on the prescription dataset (Training + Validation)
+python finetune_on_dataset.py --all-data --epochs 50 --train
+
+# recognise a full handwritten page
+python src_tensorflow2/page_infer.py path/to/page.png
+```
+
+---
+
+## Original project description (by Sushant Gautam)
+
+
 
 
 ### Description
